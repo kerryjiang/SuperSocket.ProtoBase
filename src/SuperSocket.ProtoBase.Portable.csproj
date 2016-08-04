@@ -39,9 +39,6 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Solution Items\GlobalAssemblyInfo.cs">
-      <Link>GlobalAssemblyInfo.cs</Link>
-    </Compile>
     <Compile Include="BasicStringParser.cs" />
     <Compile Include="BufferedPackageInfo.cs" />
     <Compile Include="BufferList.cs" />
@@ -74,6 +71,7 @@
     <Compile Include="ProcessResult.cs" />
     <Compile Include="ProcessState.cs" />
     <Compile Include="Properties\AssemblyInfo.Portable.cs" />
+    <Compile Include="Properties\AssemblyInfo.Product.cs" />
     <Compile Include="ProtoHandlerBase.cs" />
     <Compile Include="ReceiveFilters\BeginEndMarkReceiveFilter.cs" />
     <Compile Include="ReceiveFilters\CountSpliterReceiveFilter.cs" />

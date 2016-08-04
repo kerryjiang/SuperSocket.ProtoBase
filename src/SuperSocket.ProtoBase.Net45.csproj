@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{88C9312E-7520-4F6B-BF25-30DA5990D270}</ProjectGuid>
+    <ProjectGuid>{092DFE24-997A-41E3-9602-B5D52D3749DD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SuperSocket.ProtoBase</RootNamespace>
@@ -41,9 +41,6 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Solution Items\GlobalAssemblyInfo.cs">
-      <Link>GlobalAssemblyInfo.cs</Link>
-    </Compile>
     <Compile Include="BasicStringParser.cs" />
     <Compile Include="CloseReason.cs" />
     <Compile Include="DefaultProtoHandler.cs" />
@@ -53,6 +50,7 @@
     <Compile Include="Encoder\IProtoDataEncoder.cs" />
     <Compile Include="IOutputBuffer.cs" />
     <Compile Include="IProtoHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.Product.cs" />
     <Compile Include="ProtoHandlerBase.cs" />
     <Compile Include="ReceiveFilters\BeginEndMarkReceiveFilter.cs" />
     <Compile Include="BufferedPackageInfo.cs" />

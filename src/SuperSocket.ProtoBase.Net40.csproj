@@ -39,9 +39,6 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Solution Items\GlobalAssemblyInfo.cs">
-      <Link>GlobalAssemblyInfo.cs</Link>
-    </Compile>
     <Compile Include="BasicStringParser.cs" />
     <Compile Include="BufferStream.cs" />
     <Compile Include="Buffer\IBufferManager.cs" />
@@ -58,6 +55,7 @@
     <Compile Include="IBufferRecycler.cs" />
     <Compile Include="IBufferState.cs" />
     <Compile Include="ICommunicationChannel.cs" />
+    <Compile Include="IOutputBuffer.cs" />
     <Compile Include="IPackageHandler.cs" />
     <Compile Include="IPackageInfo.cs" />
     <Compile Include="IPackageResolver.cs" />
@@ -72,6 +70,7 @@
     <Compile Include="BufferList.cs" />
     <Compile Include="DefaultPipelineProcessor.cs" />
     <Compile Include="ProcessState.cs" />
+    <Compile Include="Properties\AssemblyInfo.Product.cs" />
     <Compile Include="ProtoHandlerBase.cs" />
     <Compile Include="ReceiveFilters\BeginEndMarkReceiveFilter.cs" />
     <Compile Include="ReceiveFilters\CountSpliterReceiveFilter.cs" />
@@ -80,6 +79,7 @@
     <Compile Include="ReceiveFilters\SearchMarkState.cs" />
     <Compile Include="ReceiveFilters\StateFullSearch.cs" />
     <Compile Include="ReceiveFilters\TerminatorReceiveFilter.cs" />
+    <Compile Include="SingleItemList.cs" />
     <Compile Include="StringPackageInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
