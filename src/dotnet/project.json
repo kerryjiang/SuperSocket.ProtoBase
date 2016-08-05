@@ -1,6 +1,6 @@
 {
     "name": "SuperSocket.ProtoBase",
-    "version": "1.7.0.9",
+    "version": "1.7.1.0",
     "authors": [ "Kerry Jiang", "Other contributors" ],
     "buildOptions": {
         "emitEntryPoint": false,
