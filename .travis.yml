@@ -1,0 +1,4 @@
+language: csharp
+script:
+  - nuget restore src/SuperSocket.ProtoBase.sln
+  - xbuild src/SuperSocket.ProtoBase.sln
