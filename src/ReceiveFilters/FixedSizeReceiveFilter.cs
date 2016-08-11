@@ -15,6 +15,11 @@ namespace SuperSocket.ProtoBase
         private int m_OriginalSize;
         private int m_Size;
 
+        protected int Size
+        {
+            get { return m_Size; }
+        }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="FixedSizeReceiveFilter{TPackageInfo}"/> class.
         /// </summary>
@@ -44,7 +49,6 @@ namespace SuperSocket.ProtoBase
             if (total > m_Size)
             {
                 rest = total - m_Size;
-                data.SetLastItemLength(data.Last.Count - rest);
             }
 
             var bufferStream = this.GetBufferStream(data);

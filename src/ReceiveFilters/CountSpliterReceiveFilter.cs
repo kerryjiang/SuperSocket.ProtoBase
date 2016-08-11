@@ -61,8 +61,6 @@ namespace SuperSocket.ProtoBase
                 length -= parsedLength;
             }
 
-            //Found enougth spliters
-            data.SetLastItemLength(offset - currentSegment.Offset);
             Reset();
             rest = length;
 

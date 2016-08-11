@@ -145,8 +145,6 @@ namespace SuperSocket.ProtoBase
                 totalParsed += parsedLength; //include begin mark if the mark is found in this round receiving
                 rest = length - totalParsed;
 
-                data.SetLastItemLength(totalParsed);
-
                 var packageInfo = ResolvePackage(this.GetBufferStream(data));
 
                 if (!ReferenceEquals(packageInfo, default(TPackageInfo)))

@@ -107,6 +107,7 @@ namespace SuperSocket.ProtoBase
                         
                         if(rest != last.Count)
                         {
+                            receiveCache.SetLastItemLength(last.Count - rest);
                             PushResetData(segment, rest);
                         }
                         

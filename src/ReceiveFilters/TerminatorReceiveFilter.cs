@@ -62,7 +62,6 @@ namespace SuperSocket.ProtoBase
             }
 
             //Found
-            data.SetLastItemLength(parsedLength);
             rest = current.Count - parsedLength;
 
             return ResolvePackage(this.GetBufferStream(data));
