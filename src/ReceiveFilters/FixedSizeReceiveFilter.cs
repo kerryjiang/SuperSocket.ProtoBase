@@ -15,6 +15,10 @@ namespace SuperSocket.ProtoBase
         private int m_OriginalSize;
         private int m_Size;
 
+        /// <summary>
+        /// The total size of the package the receive filter should receive
+        /// </summary>
+        /// <returns></returns>
         protected int Size
         {
             get { return m_Size; }
