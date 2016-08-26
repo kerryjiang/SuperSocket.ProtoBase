@@ -68,6 +68,7 @@ namespace SuperSocket.ProtoBase
 
             while (true)
             {
+                var lastItemLength = receiveCache.Last.Count;
                 var packageInfo = currentReceiveFilter.Filter(receiveCache, out rest);
 
                 if (currentReceiveFilter.State == FilterState.Error)
@@ -105,9 +106,8 @@ namespace SuperSocket.ProtoBase
                     {
                         var last = receiveCache.Last;
                         
-                        if(rest != last.Count)
+                        if(rest != lastItemLength)
                         {
-                            receiveCache.SetLastItemLength(last.Count - rest);
                             PushResetData(segment, rest);
                         }
                         

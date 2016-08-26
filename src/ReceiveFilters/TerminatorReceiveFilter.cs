@@ -64,6 +64,9 @@ namespace SuperSocket.ProtoBase
             //Found
             rest = current.Count - parsedLength;
 
+            if (rest > 0)
+                data.SetLastItemLength(parsedLength);
+
             return ResolvePackage(this.GetBufferStream(data));
         }
 

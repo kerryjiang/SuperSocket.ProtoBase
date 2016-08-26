@@ -53,6 +53,7 @@ namespace SuperSocket.ProtoBase
             if (total > m_Size)
             {
                 rest = total - m_Size;
+                data.SetLastItemLength(data.Last.Count - rest);
             }
 
             var bufferStream = this.GetBufferStream(data);
