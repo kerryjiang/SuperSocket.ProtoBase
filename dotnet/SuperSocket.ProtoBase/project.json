@@ -7,7 +7,11 @@
         "compile": {
             "include": [ "../../src/**/*.cs" ],
             "exclude": [ "./**/*.cs" ],
-            "excludeFiles": [ "../../src/Properties/AssemblyInfo.Portable.cs", "../../src/LINQ.cs", "../../src/Func.cs" ]
+            "excludeFiles": [
+                "../../src/Properties/AssemblyInfo.Portable.cs",
+                "../../src/LINQ.cs",
+                "../../src/Func.cs",
+                "../../src/ExtensionAttribute.cs" ]
         }
     },
 

@@ -5,7 +5,7 @@ using System.Text;
 namespace System.Runtime.CompilerServices
 {
     [AttributeUsage(AttributeTargets.Method)]
-    public sealed class ExtensionAttribute : Attribute
+    internal sealed class ExtensionAttribute : Attribute
     {
         public ExtensionAttribute() { }
     }
