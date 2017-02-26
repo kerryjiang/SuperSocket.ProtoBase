@@ -142,6 +142,11 @@ namespace SuperSocket.ProtoBase
         /// All buffered binary segments in the stream
         /// </summary>
         IList<ArraySegment<byte>> Buffers { get; }
+
+        /// <summary>
+        /// Clear all data in the buffer
+        /// </summary>
+        void Clear();
     }
 
     /// <summary>
@@ -271,6 +276,14 @@ namespace SuperSocket.ProtoBase
             m_CurrentSegmentOffset = 0;
             m_Length = 0;
             m_Position = 0;
+        }
+
+        public void Clear()
+        {
+            var segments = m_Segments;
+
+            if (segments != null)
+                segments.Clear();
         }
 
         /// <summary>

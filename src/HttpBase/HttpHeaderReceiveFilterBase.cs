@@ -91,6 +91,7 @@ namespace SuperSocket.ProtoBase
             if (nextReceiveFilter != null)
             {
                 NextReceiveFilter = nextReceiveFilter;
+                bufferStream.Clear();
                 return default(TPackageInfo);
             }
 
