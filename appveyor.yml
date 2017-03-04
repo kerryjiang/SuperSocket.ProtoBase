@@ -15,7 +15,5 @@ build_script:
 - dotnet build dotnet/SuperSocket.ProtoBase
 after_build:
 test_script:
-artifacts:
 cache:
 - '%USERPROFILE%\.nuget\packages'
-on_finish: # Run the demo to show that it works
