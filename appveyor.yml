@@ -1,0 +1,21 @@
+version: '1.0.{build}'
+configuration:
+- Release
+platform: Any CPU
+environment:
+  # Don't report back to the mothership
+  DOTNET_CLI_TELEMETRY_OPTOUT: 1
+init:
+- cinst gitlink --version=2.3.0 -y
+before_build:
+- nuget restore src/SuperSocket.ProtoBase.sln
+- dotnet restore dotnet/SuperSocket.ProtoBase
+build_script:
+- msbuild src/SuperSocket.ProtoBase.sln
+- dotnet build dotnet/SuperSocket.ProtoBase
+after_build:
+test_script:
+artifacts:
+cache:
+- '%USERPROFILE%\.nuget\packages'
+on_finish: # Run the demo to show that it works
