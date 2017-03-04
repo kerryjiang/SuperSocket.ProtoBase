@@ -278,6 +278,9 @@ namespace SuperSocket.ProtoBase
             m_Position = 0;
         }
 
+        /// <summary>
+        /// /// Clear all data in the buffer
+        /// </summary>
         public void Clear()
         {
             var segments = m_Segments;
