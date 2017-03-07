@@ -17,3 +17,9 @@ after_build:
 test_script:
 cache:
 - '%USERPROFILE%\.nuget\packages'
+deploy:
+  provider: NuGet
+  api_key:
+    secure: XZCh4fjRTBmdkkbLON7josAY9IJHxBKWG+//RVGUV5OGs54Y4Gux5NM3aNk9Jio9
+  skip_symbols: false
+  artifact: /.*\.nupkg/
