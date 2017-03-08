@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <VersionPrefix>1.7.0.12</VersionPrefix>
+    <Authors>Kerry Jiang;Other contributors</Authors>
+    <TargetFramework>netstandard1.1</TargetFramework>
+    <AssemblyName>SuperSocket.ProtoBase</AssemblyName>
+    <OutputType>Library</OutputType>
+    <PackageId>SuperSocket.ProtoBase</PackageId>
+    <PackageTags>SuperSocket;Network Protocol;Protocol Analysis</PackageTags>
+    <PackageReleaseNotes>First release for .net core</PackageReleaseNotes>
+    <PackageProjectUrl>http://www.supersocket.net/</PackageProjectUrl>
+    <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/kerryjiang/SuperSocket.ProtoBase</RepositoryUrl>
+    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove=".\**\*.cs;..\..\src\Properties\AssemblyInfo.Portable.cs;..\..\src\LINQ.cs;..\..\src\Func.cs;..\..\src\ExtensionAttribute.cs" />
+    <Compile Include="..\..\src\**\*.cs" Exclude=".\**\*.cs;bin\**;obj\**;**\*.xproj;packages\**;..\..\src\Properties\AssemblyInfo.Portable.cs;..\..\src\LINQ.cs;..\..\src\Func.cs;..\..\src\ExtensionAttribute.cs" />
+  </ItemGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.1' ">
+    <DefineConstants>$(DefineConstants);NETSTANDARD1_1</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.1' ">
+    <PackageReference Include="System.Linq" Version="4.3.0" />
+    <PackageReference Include="System.Runtime.Extensions" Version="4.3.0" />
+    <PackageReference Include="System.Text.Encoding" Version="4.3.0" />
+    <PackageReference Include="System.IO" Version="4.3.0" />
+    <PackageReference Include="System.Threading" Version="4.3.0" />
+  </ItemGroup>
+
+</Project>
