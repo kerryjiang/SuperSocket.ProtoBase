@@ -7,18 +7,17 @@
 	<Target Name="Pack">
 		<Exec Command="nuget pack SuperSocket.nuspec"/>
 	</Target>
-	<Target Name="CleanFolders">
-	  <RemoveDir Directories="src\bin" />
-	  <RemoveDir Directories="src\obj" />
-	</Target>
 	<Target Name="Release-SuperSocketProtoBase">
-		<CallTarget Targets="CleanFolders"/>  
+		<RemoveDir Directories="src\bin;src\obj" />
 		<MSBuild Projects="src\SuperSocket.ProtoBase.Net20.csproj" Targets="Clean;Build" Properties="Configuration=$(Configuration);OutputPath=..\bin\net20\$(Configuration);SignAssembly=True;AssemblyOriginatorKeyFile=..\..\..\SignKeys\supersocket.snk"/>
-		<CallTarget Targets="CleanFolders"/>  
+		<RemoveDir Directories="src\bin;src\obj" />
 		<MSBuild Projects="src\SuperSocket.ProtoBase.Net35.csproj" Targets="Clean;Build" Properties="Configuration=$(Configuration);OutputPath=..\bin\net35-client\$(Configuration);SignAssembly=True;AssemblyOriginatorKeyFile=..\..\..\SignKeys\supersocket.snk"/>
-		<CallTarget Targets="CleanFolders"/>  
+		<RemoveDir Directories="src\bin;src\obj" />
 		<MSBuild Projects="src\SuperSocket.ProtoBase.Portable.csproj" Targets="Clean;Build" Properties="Configuration=$(Configuration);OutputPath=..\bin\profile328\$(Configuration);SignAssembly=True;AssemblyOriginatorKeyFile=..\..\..\SignKeys\supersocket.snk"/>
-		<CallTarget Targets="CleanFolders"/>  
+		<RemoveDir Directories="src\bin;src\obj" />
+		<RemoveDir Directories="dotnet\SuperSocket.ProtoBase\bin" />
+	    <RemoveDir Directories="dotnet\SuperSocket.ProtoBase\obj" />
+		<Exec Command="dotnet restore" WorkingDirectory="dotnet\SuperSocket.ProtoBase" />
 		<Exec Command="dotnet build -c $(Configuration) -f netstandard1.1 -o ..\..\bin\netstandard1.1\$(Configuration)" WorkingDirectory="dotnet\SuperSocket.ProtoBase" />
 		<GetAssemblyIdentity AssemblyFiles="bin\net20\$(Configuration)\SuperSocket.ProtoBase.dll">
 			<Output TaskParameter="Assemblies" ItemName="myAssemblyInfo"/>
