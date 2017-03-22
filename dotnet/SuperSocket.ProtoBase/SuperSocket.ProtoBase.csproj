@@ -25,7 +25,7 @@
 
   <ItemGroup>
     <Compile Remove=".\**\*.cs;..\..\src\Properties\AssemblyInfo.Portable.cs;..\..\src\LINQ.cs;..\..\src\Func.cs;..\..\src\ExtensionAttribute.cs" />
-    <Compile Include="..\..\src\**\*.cs" Exclude=".\**\*.cs;bin\**;obj\**;**\*.xproj;packages\**;..\..\src\Properties\AssemblyInfo.Portable.cs;..\..\src\LINQ.cs;..\..\src\Func.cs;..\..\src\ExtensionAttribute.cs" />
+    <Compile Include="..\..\src\**\*.cs" Exclude=".\**\*.cs;bin\**;obj\**;**\*.xproj;packages\**;..\..\src\Properties\AssemblyInfo.Net20.cs;..\..\src\Properties\AssemblyInfo.Net35.cs;..\..\src\Properties\AssemblyInfo.Portable.cs;..\..\src\LINQ.cs;..\..\src\Func.cs;..\..\src\ExtensionAttribute.cs" />
   </ItemGroup>
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.1' ">
