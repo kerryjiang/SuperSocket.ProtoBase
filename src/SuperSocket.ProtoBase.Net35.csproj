@@ -67,7 +67,7 @@
     <Compile Include="PackageInfo.cs" />
     <Compile Include="ProcessResult.cs" />
     <Compile Include="ProcessState.cs" />
-    <Compile Include="Properties\AssemblyInfo.Portable.cs" />
+    <Compile Include="Properties\AssemblyInfo.Net35.cs" />
     <Compile Include="Properties\AssemblyInfo.Product.cs" />
     <Compile Include="ProtoHandlerBase.cs" />
     <Compile Include="ReceiveFilters\BeginEndMarkReceiveFilter.cs" />
