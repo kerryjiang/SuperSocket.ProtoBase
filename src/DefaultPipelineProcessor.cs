@@ -14,6 +14,8 @@ namespace SuperSocket.ProtoBase
     {
         private IReceiveFilter<TPackageInfo> m_ReceiveFilter;
 
+        private IReceiveFilter<TPackageInfo> m_FirstReceiveFilter;
+
         private BufferList m_ReceiveCache;
 
         private int m_MaxPackageLength;
@@ -25,7 +27,7 @@ namespace SuperSocket.ProtoBase
         /// <param name="maxPackageLength">The max package size.</param>
         public DefaultPipelineProcessor(IReceiveFilter<TPackageInfo> receiveFilter, int maxPackageLength = 0)
         {
-            m_ReceiveFilter = receiveFilter;
+            m_FirstReceiveFilter = m_ReceiveFilter = receiveFilter;
             m_ReceiveCache = new BufferList();
             m_MaxPackageLength = maxPackageLength;
         }
@@ -163,22 +165,15 @@ namespace SuperSocket.ProtoBase
         /// cleanup the cached the buffer by resolving them into one package at the end of the piple line
         /// </summary>
         /// <returns>return the processing result</returns>
-        public ProcessResult CleanUp()
+        public void Reset()
         {
-            var currentReceiveFilter = m_ReceiveFilter as ICleanupReceiveFilter<TPackageInfo>;
+            m_ReceiveCache.Clear();
+            m_FirstReceiveFilter.Reset();
 
-            if (currentReceiveFilter == null)
-                throw new Exception("The current receive filter doesn't support cleanup");
-
-            var receiveCache = m_ReceiveCache;
-
-            var package = currentReceiveFilter.ResolvePackage(receiveCache);
-
-            if (m_ReceiveFilter.State == FilterState.Error)
-                return ProcessResult.Create(ProcessState.Error);
-
-            return ProcessResult.Create(ProcessState.Completed, new SingleItemList<IPackageInfo>(package));
+            if (m_ReceiveFilter != m_FirstReceiveFilter)
+                m_ReceiveFilter = m_FirstReceiveFilter;
         }
+
 
         /// <summary>
         /// Gets the received cache.

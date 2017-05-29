@@ -25,11 +25,9 @@ namespace SuperSocket.ProtoBase
         /// </value>
         BufferList Cache { get; }
 
-
         /// <summary>
-        /// cleanup the cached the buffer by resolving them into one package at the end of the piple line
+        /// Reset the state of the processor to the initial status
         /// </summary>
-        /// <returns>return the processing result</returns>
-        ProcessResult CleanUp();
+        void Reset();
     }
 }
