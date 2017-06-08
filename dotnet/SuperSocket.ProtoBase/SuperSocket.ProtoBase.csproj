@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <VersionPrefix>1.7.0.16</VersionPrefix>
+    <VersionPrefix>1.7.0.17</VersionPrefix>
     <Authors>Kerry Jiang;Other contributors</Authors>
     <TargetFramework>netstandard1.1</TargetFramework>
     <AssemblyName>SuperSocket.ProtoBase</AssemblyName>
@@ -21,6 +21,7 @@
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
+	<GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

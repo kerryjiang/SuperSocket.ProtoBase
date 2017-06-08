@@ -26,10 +26,15 @@
   </metadata>
   <files>
     <file src="bin\netstandard1.1\release\SuperSocket.ProtoBase.dll" target="lib\netstandard1.1" />
+	<file src="bin\netstandard1.1\release\SuperSocket.ProtoBase.XML" target="lib\netstandard1.1" />
     <file src="bin\net20\release\SuperSocket.ProtoBase.dll" target="lib\net20" />
     <file src="bin\net20\release\SuperSocket.ProtoBase.XML" target="lib\net20" />
     <file src="bin\net35-client\release\SuperSocket.ProtoBase.dll" target="lib\net35-client" />
     <file src="bin\net35-client\release\SuperSocket.ProtoBase.XML" target="lib\net35-client" />
+	<file src="bin\net40\release\SuperSocket.ProtoBase.dll" target="lib\net40" />
+	<file src="bin\net40\release\SuperSocket.ProtoBase.XML" target="lib\net40" />
+	<file src="bin\net45\release\SuperSocket.ProtoBase.dll" target="lib\net45" />
+	<file src="bin\net45\release\SuperSocket.ProtoBase.XML" target="lib\net45" />
     <file src="bin\profile328\release\SuperSocket.ProtoBase.dll" target="lib\portable-net40+sl50+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10" />
     <file src="bin\profile328\release\SuperSocket.ProtoBase.XML" target="lib\portable-net40+sl50+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10" />
   </files>
